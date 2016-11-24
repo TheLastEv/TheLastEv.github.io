@@ -392,7 +392,7 @@ footer h1
 #a_venir
 {
 		 
-    width: 39%;
+    width: 52%;
 
     
     
@@ -437,8 +437,9 @@ footer h1
 
 #Liens_utiles
 {
-    width: 33%;
-   
+    
+    width: 20%;
+
 }
 
 #a_venir img
@@ -454,7 +455,7 @@ footer h1
    display: flex;
     justify-content: space-between;
     margin-top: 0;
-   
+    
    
     margin-left: 0px;
    
