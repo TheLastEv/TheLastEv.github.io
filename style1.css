@@ -43,24 +43,15 @@ body
     background: url('images/fond_gris.png');
     font-family: 'Trebuchet MS', Arial, sans-serif;
     color: #181818;
-    
 }
 
 #bloc_page
 {
-	 
     width: 900px;
     margin: auto;
-    
 }
 
-@media all and (max-width: 1024px)
-{
-    #bloc_page
-    {
-        width: auto;
-    }
-}
+
 
 section h1, footer h1, nav a
 {
@@ -142,45 +133,29 @@ nav a:hover
     border-bottom: 3px solid #51617c;
 }
 
-@media all and (max-width: 1024px)
-{
-    nav
-    {
-        width: auto;
-        text-align: left;
-    }
-    
-    nav ul
-    {
-        flex-direction: column;
-    }
-
-    nav li
-    {
-        padding-left: 4px;
-    }
-    
-    nav a
-    {
-        font-size: 1.1em;
-    }
-    
-    nav a:hover
-    {
-        border-bottom: 0;
-    }
-}
 
 /* Bannière */
 
 #banniere_image
 {
-    margin-top: 15px;
-    height: 200px;
-    border-radius: 5px;
     background: url('images/smiley-faces.jpg') no-repeat;
     background-size: 100%;
     background-position: center center;
+    
+}
+
+#banniere_image_contact
+{
+    background: url('images/buildings.jpg') no-repeat;
+    background-size: 100%;
+    background-position: center center;
+}
+
+.banniere_image
+{
+	 margin-top: 15px;
+    height: 200px;
+    border-radius: 5px;
     position: relative;
     box-shadow: 0px 4px 4px #1c1a19;
     margin-bottom: 25px;
@@ -201,36 +176,63 @@ nav a:hover
     
 }
 
+#btn_rg_baniere
+{
+	position: absolute;
+   right: 5px;
+   bottom: 5px;
+	font-size: 1.2em;
+}
 
+#btn_rg_form
+{
+	display: inline-block;	
+	align-self: flex-end;
+   font-size: 0.9em;
+}
 
 .bouton_rouge
 {
     height: 25px;
-    position: absolute;
-    right: 5px;
-    bottom: 5px;
     background: url('images/fond_degraderouge.png') repeat-x;
     border: 1px solid #760001;
     border-radius: 5px;
-    font-size: 1.2em;
     text-align: center;
     padding: 3px 8px 0px 8px;
     color: white;
     text-decoration: none;
 }
 
+/* css page contact tests */
+
+textarea
+{
+	width: 100%;
+	height: 100%;
+}
+
+#message_form
+{
+	/*position: relative;*/
+	width: 90%;	
+	height: 80%;
+	border: 0px solid yellow;	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+	
+}
+
+/*  Fin css contact*/
+
 .bouton_rouge img
 {
     border: 0;
 }
 
-@media all and (max-width: 1024px)
-{
-    #banniere_image
-    {
-        display: none;
-    }
-}
+
 
 /* Corps */
 
@@ -249,6 +251,17 @@ article
 {
     margin-right: 20px;
     flex: 3;
+}
+
+article form
+{
+	display: flex;
+	border: 0px solid black;
+	height: 50%;	
+	/*width: 80%;*/
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
 }
 
 .ico_categorie
@@ -281,33 +294,30 @@ aside
     left: -12px;
 }
 
-#photo_zozor
-{
-    text-align: center;
-       
-}
-
 #fond_zozor
 {
-    
+   
     background: url('images/ninja-mini-b.png');
     background-repeat: no-repeat;
     background-position: center;
-    text-align: center;
     background-size: 70%;
-        
-   
-
-    
 }
+
+
+#fond_google, #fond_zozor
+{
+	text-align: center;
+}
+
+
 
 #fond_zozor img
 {
     border-radius: 90px;
     border: 2px solid #181818;
-    text-align: center;
-    
 }
+
+
 
 aside img
 {
@@ -316,6 +326,43 @@ aside img
 
 @media all and (max-width: 1024px)
 {
+	#bloc_page
+    {
+        width: auto;
+    }
+    
+    nav
+    {
+        width: auto;
+        text-align: left;
+    }
+    
+    nav ul
+    {
+        flex-direction: column;
+    }
+
+    nav li
+    {
+        padding-left: 4px;
+    }
+    
+    nav a
+    {
+        font-size: 1.1em;
+    }
+    
+    nav a:hover
+    {
+        border-bottom: 0;
+    }    
+    
+	    #banniere_image, #banniere_image_contact
+    {
+        display: none;
+    }
+
+
     section
     {
         flex-direction: column;
@@ -332,23 +379,19 @@ aside img
         display: none;
     }
     
-    #fond_zozor img
+    #fond_zozor img, #fond_google img
     {
-			
-		       
-        width:60%;
-        
-        margin-left: 15px;
+		width:60%;
+      margin-left: 15px;
     }
-    
-	#fond_zozor
-{
-    background-size: 0%;
    
-    
-    
-}
-	aside   #fond_zozor
+       
+	#fond_zozor, #fond_google
+	{
+    background-size: 0%;
+   }
+		
+	aside #fond_zozor, aside #fond_google
 	{
 		float: right;
 	}  
@@ -356,7 +399,22 @@ aside img
     aside p:last-child
     {
         text-align: center;
+        clear: both;
     }
+    
+    textarea
+    {
+				
+		width:80%;
+      height:150px;
+		    
+    }
+    
+    #btn_rg_form
+	 {
+		margin-right: 10%;
+   
+	 }
 }
 
 
